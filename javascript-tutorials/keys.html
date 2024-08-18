@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input type="text" onkeydown="a()" onkeyup="b()"> -->
+
+    <select id="a" onchange="c()">
+        <option>Red</option>
+        <option>Blue</option>
+        <option>Green</option>
+        <option>Yellow</option>
+    </select>
+    
+    <script>
+        // function a(){
+        //     console.log("On key Down");
+        //     document.body.style.background="red"
+        // }
+
+        // function b(){
+        //     console.log("On key Up");
+        //     document.body.style.background="blue"
+        // }
+
+        function c(){
+            console.log("Change the Value");
+            let select = document.querySelector("select")
+            document.body.style.background=select.value
+            // select.style.background = select.value
+            // select.style.border = "4px solid white"
+            // select.style.height = "100px"
+            // select.style.width = "80rem"
+            // select.style.fontSize = "100px"
+        }
+
+       
+    </script>
+</body>
+</html>

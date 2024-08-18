@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* ==================== Pseudo Elements ========================= */
+        .box:first-child{
+            color: var(--primary-color);
+        }
+        .box:last-child{
+            background: yellow;
+        }
+        .box:nth-child(2){
+            border: 2px solid green;
+            font-size: var(--font-size);
+        }
+        .boxes::before{
+            content: "hey this my content";
+        }
+        .boxes::after{
+            content: "content inserted using CSS";
+            color: tomato;
+        }
+        .box::first-letter{
+            color: slateblue;
+            font-size: 56px;
+        }
+        ::selection{
+            color: aqua;
+            background: black;
+        }
+
+        /* =================== Creating Variable using CSS ========================= */
+        :root{
+            --primary-color : red;
+            --font-size : 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">This is my first box</div>
+        <div class="box">This is my second box</div>
+        <div class="box">This is my third box</div>
+    </div>
+
+    <script>
+    </script>
+</body>
+</html>

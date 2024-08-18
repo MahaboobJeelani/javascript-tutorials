@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /////inside promise there are 2 types properties "State" and "Results"
+
+        // let promise1 = new Promise((resolve, reject) => {
+        //     let i = true
+        //     if (i = true) {
+        //         setTimeout(() => {
+        //             console.log("Got the data");
+        //             resolve()
+        //         }, 5000)
+        //     } else {
+        //         reject()
+        //     }
+        // })
+
+        // promise1.then(() => {
+        //     console.log("Success");
+        // })
+        // .catch(() => {
+        //     console.log("Rejected");
+        // })
+
+
+
+        ////==========================  CODE WITH HARRY  =====================================
+
+        //// we can exicute the promises one after another by using then and catch
+        // let p1 = new Promise((resolve, rejected) => {
+        //     setTimeout(() => {
+        //         console.log("this is the first Promise");
+        //         resolve(56)
+        //     }, 2000)
+        // })
+        // let p2 = p1.then((value) => {
+        //     console.log(value);
+        //     let p3 = new Promise((resolve, rejected) => {
+        //         setTimeout(() => {
+        //             console.log("Promise 2");
+        //             resolve()
+        //         }, 3000)
+        //     })
+        //     return p2
+        // }).then((value) => {
+        //     console.log("promises are completed");
+        //     return 2
+        // }).then((value) => {
+        //     console.log("now we are don");
+        // })
+
+        ////Promise API == is has 6 static methods
+        ////1.promise.all
+        ////2. promise.allSettled
+        ////3. promise.race
+        ////4. promise.any
+        ////5. promise.resolve
+        ////6.promise.reject
+
+
+
+        async function code(){
+            let delhiWeather = new Promise((resolve, rejecte)=>{
+                setTimeout(()=>{
+                    resolve("27")
+                }, 2000)
+            })
+
+            let bangaloreWeather = new Promise((resolve, rejecte)=>{
+                setTimeout(()=>{
+                    resolve("32 deg")
+                }, 5000)
+            })
+
+            console.log("Fetching Delhi weather please wait...");
+            let delhiw = await delhiWeather
+            console.log("Fetched delhi Weather:" + delhiw);
+            console.log("Fetching Bangalore weather please wait...");
+            let bangalorew = await bangaloreWeather
+            console.log("Fetched Bangalore Weather:" + bangalorew);
+            return[delhiw, bangalorew]
+
+        }
+        console.log("welcome to weather control room");
+        let a = code()
+        a.then((value)=>{
+            console.log(value);
+        })
+
+        ////===================== Try and Catch =========================================
+        // setTimeout(()=>{
+        //     console.log("hacking wifi 1.....  Please wait");
+        // }, 2000)
+
+        // setTimeout(()=>{
+        //     console.log("hacking wifi 2.....  Please wait");
+        // }, 4000)
+
+        // setTimeout(()=>{
+        //     console.log("hacking wifi 3.....  Please wait");
+        // }, 6000)
+
+        // setTimeout(()=>{
+        //     console.log("hacking wifi 4.....  Please wait");
+        // },8000)
+
+        ////=========================== type-1 ==================================
+        // try{
+        //     console.log(jeelani);
+        // }
+        // catch(error){
+        //     console.log("remaining Programs will be Running");
+        // }
+
+        ////======================== type-2 =======================
+        ////Its give error
+        // try{
+        //     setTimeout(()=>{
+        //         console.log(jeelani);
+        //     },200)
+        // }
+        // catch(error){
+        //     console.log("remaining Programs will be Running");
+        // }
+
+        ////=========================  Type-3  ============================
+        // Its doesn't give error
+        // try{
+        //     setTimeout(()=>{
+        //         try {
+        //             console.log(jeelani);
+        //         } catch (error) {
+        //             console.log("Error is handled by try and catch block");
+        //         }
+        //     },200)
+
+        // }
+        // catch(error){
+        //     console.log("remaining Programs will be Running");
+        // }
+
+
+    </script>
+</body>
+
+</html>

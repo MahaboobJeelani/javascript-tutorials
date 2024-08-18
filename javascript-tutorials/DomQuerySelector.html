@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div class="a" id="b">Div 1</Div>
+    <div class="a">Div 2</div>
+    <div class="a">Div 3</div>
+    <div class="a">Div 4</div>
+    <div class="a">Div 5</div>
+    <section>Section</section> -->
+
+    <h1 id="a">Choose Theme Color</h1>
+    <label> Dark</label>
+    <input id="dark" type="radio" name="a" onclick="dark()">
+
+    <label>Light</label>
+    <input  type="radio" name="a" onclick="Light()">
+    <Script>
+        // let text = document.getElementById("a")
+    
+        // function Dark(){
+        //     document.body.style.background="black"
+        //     document.body.style.color="white"
+        //     text.innerText = "Dark Theme is Activated"
+        //     let radiobtn = document.getElementsByTagName('input')
+        //     radiobtn.setAttribute('type', 'text') 
+        // }
+
+        ///// This is the second way by using addEventListener
+        // let darkTheam = document.getElementById("dark")
+        // darkTheam.addEventListener('click', (ele)=>{
+        //    document.body.style.background = "black";
+        //     document.body.style.color = "white";
+        // })
+
+        // function Light(){
+        //     document.body.style.background="white"
+        //     document.body.style.color="black"
+        //     text.innerText = "Light Theme is Activated"
+        // }
+    
+    
+            // let div = document.querySelector("#b")
+            // console.log(div);
+    
+            // let div1 = document.querySelector('.a')
+            // console.log(div1);
+        
+           
+            // let div2 = document.querySelector("div")
+            // console.log(div2);
+    
+            // let div3 = document.querySelector("#b")
+            // console.log(div3.innerHTML);
+            // div3.style.background = "orange"
+    
+            //// ========================= Checking pure array or not ========================
+            // let section = document.getElementsByTagName("section")
+            // console.log(section);
+    
+            // let impure = Array.isArray(section)
+            // console.log(impure);
+            
+            ////========================== Converting impure array to pure array =============================
+            // let section = document.getElementsByTagName("section")
+            // console.log(section);
+            // let purity = Array.from(section)
+            // console.log(purity);
+            // section[0].style.background = "red"
+    
+        //// ==================QuerySelector is only support the forEach loop and it doesn't support the map
+        //    let x = document.querySelectorAll(".a")
+        //    let section = document.querySelectorAll('section')
+        //    x.forEach((element)=>{
+        //     element.style.background = "yellow"
+        //     // section[0].style.background = 'red'
+        //    })
+    
+        //// ===================QuerySelector is only support the forEach loop and it doesn't support the map
+        // let y = document.querySelectorAll(".a")
+        // console.log(y);
+        // y.map((ele)=>{
+        //     ele.style.background = "red"
+        // })
+            
+        </Script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // ======================================= CODE WITH HARRY =============================================== 
+        // let url = "https://kontests.net/api/v1/all"
+
+        let response = fetch('https://dummyjson.com/products');
+
+        response.then((v) => {
+            return v.json()
+        })
+            .then((p) => {
+                console.log(p);
+                for (let items in p) {
+                    console.log(items.name);
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+
+
+        // let response = fetch('https://dummyjson.com/products');
+
+        // response
+        //     .then((v) => {
+        //         return v.json();
+        //     })
+        //     .then((p) => {
+        //         console.log(p);
+        //         for (let item of p) {
+        //             console.log(item.name);
+        //         }
+        //     })
+        //     .catch((error) => {
+        //         console.error('Error:', error);
+        //     });
+
+
+        // let response = fetch('https://dummyjson.com/products');
+
+        // response
+        //     .then((v) => {
+        //         if (!v.ok) {
+        //             throw new Error(`HTTP error! Status: ${v.status}`);
+        //         }
+        //         return v.json();
+        //     })
+        //     .then((p) => {
+        //         console.log(p.products);
+
+        //         for (let item of p) {
+        //             console.log(item.id);
+        //         }
+        //     })
+        //     .catch((error) => {
+        //         console.error('Error:', error);
+        //     });
+
+
+
+    </script>
+</body>
+
+</html>

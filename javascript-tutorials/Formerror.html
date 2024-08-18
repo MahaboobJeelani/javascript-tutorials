@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <form>
+        <label>Name:</label>
+        <input type="text" required> <br>
+        <label>Email:</label>
+        <input type="email" required> <br>
+        <label>Password</label>
+        <input type="password" required><br>
+        <label>Gender</label>
+        Male:<input type="radio" name="a" value="male">
+        Female:<input type="radio" name="a" value="female"> <br>
+        <label>Courses</label>
+        HTML:<input type="checkbox" value="html">
+        CSS:<input type="checkbox" value="CSS"> <br>
+        <button onclick="formHandler()">Submit</button>
+    </form>
+
+    <script>
+        let inputs = document.querySelectorAll("input")
+        console.log(inputs);
+
+        function formHandler() {
+            event.preventDefault()
+            let username = inputs[0].value
+            let useremail = inputs[1].value
+            let password = inputs[2].value
+            let gender
+            let courses
+
+
+            if (username == "") {
+                alert("Plz write the name")
+            }
+            else if (username.length < 4) {
+                alert("name is too short")
+            }
+
+            if (inputs[3].checked == false && inputs[4].checked == false) {
+                alert("select gender")
+            }
+
+            if (inputs[3].checked == true) {
+                gender = inputs[3].value
+            }
+            if (inputs[4].checked == true) {
+                gender = inputs[4].value
+            }
+
+            if (inputs[5].checked == false && inputs[6].checked == false) {
+                alert("Select the Courses")
+            }
+
+            if (inputs[5].checked == true) {
+                courses = inputs[5].value
+            }
+            if (inputs[6].checked == true) {
+                courses = inputs[6].value
+            }
+            if (inputs[5].checked == true && inputs[6].checked == true) {
+                courses = 'HTMl CSS'
+            }
+
+            console.log(username, useremail, password, gender, courses);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //// Number Guessing number game
+        // let minnum = 1;
+        // let maxnum = 100
+        // let answer = Math.floor(Math.random()*(maxnum - minnum + 1)) + minnum; 
+        // let attemps = 0;
+        // let guess;
+        // let running = true;
+
+        // while(running == true){
+        //     guess = prompt(`Choose the number between ${minnum} & ${maxnum}`)
+        //     guess = Number(guess)
+
+        //     if(isNaN(guess)){
+        //         alert("Enter the valid Number")
+        //     }
+        //     else if(guess<minnum || guess > maxnum){
+        //         alert(`Enter number between ${minnum} and ${maxnum}`)
+        //     }
+        //     else{
+        //         attemps++
+        //         if(guess < answer){
+        //             alert(`Your guessing is Number ${guess} is TOO LOW`)
+        //         }
+        //         else if(guess > answer){
+        //             alert(`Too HIGH`)
+        //         }
+        //         else{
+        //             alert(`Your Given number ${guess} is not matched ${answer} TRY again`)
+        //             running == false
+        //         }
+        //     }
+        // }
+
+        // // Dynamic Password Generator
+        // function passwordgeneretor(length, includeLower, includeUpper, includeNumber, includeSpecial){
+        //     const LowerChar = "abcdefghijklmnopqrstuvwxyz"
+        //     const UpperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        //     const numberChar = "0123456789"
+        //     const specialChar = "!@#$%^&*()_+"
+
+        //     let alphabitletter = "";
+        //     let password = "";
+
+        //     alphabitletter += includeLower ? LowerChar : "";
+        //     alphabitletter += includeUpper ? UpperChar : "";
+        //     alphabitletter += includeNumber ? numberChar : "";
+        //     alphabitletter += includeSpecial ? specialChar : "";
+
+        //     if(length <= 0){
+        //         return `(Password must be at least 1)`
+        //     }
+        //     if(alphabitletter.length === 0){
+        //         return `(At least one set of charactor need to be set   )`
+        //     }
+        //     for(let i = 0; i<=length; i++){
+        //         const randomIndex = Math.floor(Math.random()*alphabitletter.length)
+        //         password += alphabitletter[randomIndex]
+        //     }
+
+        //     return password
+        // }
+        // const alphabitchar = 12
+        // const includeLower = true
+        // const includeUpper = true
+        // const includeNumber = true
+        // const includeSpecial = true
+
+        // let password1 = passwordgeneretor(alphabitchar, includeLower, includeUpper, includeNumber, includeSpecial)
+        // console.log(`The Generated Password ${password1}`);
+
+        
+        let arr = [10, 20, 30, 40]
+        let x = arr.reduce((ele, cv)=>{
+            return ele+ cv;
+        })
+        console.log(x);
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <p id="myContent">My Content</p>
+    <button>Click Me</button>
+
+    <script>
+        let para = document.getElementById('myContent');
+        let myButton1 = document.querySelector('button'); // Access the first button element
+
+
+        myButton1.addEventListener('click', (event) => {
+            para.style.backgroundColor = 'red';
+        });
+
+
+
+
+
+        // Getter and setter methods in javascript
+        // class Person {
+        //     constructor(name, age) {
+        //         this._name = name;
+        //         this._age = age;
+        //     }
+        //     set name(newName) {
+        //         if (typeof name === "string" && name > 0) {
+        //             this._name = newName;
+        //         }
+        //     }
+        //     set age(newAge) {
+        //         if (typeof newAge === "number" && newAge > 0) {
+        //             this._age = newAge;
+        //         }
+        //     }
+
+        //     get name() {
+        //         return `${this._name}`;
+        //     }
+
+        //     get age() {
+        //         return `${this._age}`;
+        //     }
+        // }
+        // let per1 = new Person("Jeelani", -23)
+        // console.log(per1.name, per1.age);
+
+
+        // function capitalize(word){
+        //     return `${word[0].toUpperCase() + word.substring(1)}`;
+        // }
+        // console.log(capitalize("azam"));
+
+
+
+    </script>
+</body>
+
+</html>

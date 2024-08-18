@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <!-- <div>Hello</div>
+    <div>world</div>
+    <div>Universe</div>
+    <div>globe</div>
+    <div>earth</div> -->
+    <P id="demo">Here  we are load data</P>
+    <button onclick="loaddata()">Click</button>
+    <script>
+        function loaddata(){
+            let xhttp = new XMLHttpRequest()
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    document.getElementById("demo").innerHTML = this.responseText
+                }
+            }
+            xhttp.open('GET',"./readme.txt",true);
+            xhttp.send()
+        }
+
+        // let divs = document.querySelectorAll("div")
+        // console.log(divs);
+        // let pure = Array.isArray(divs)
+        // console.log(pure);
+        // let purearr = Array.from(divs)
+        // console.log(purearr);
+
+        // ========== Normal Function ============
+        // function greet(){
+        //     console.log("normal function");
+        // }
+        // greet()
+        // ================= function with expression & also anonymous function means without name ===================
+        // let a= function(){
+        //     console.log("Anonymous");//Anonymous
+        // }
+        // console.log(a); // hole function
+        // console.log(a()); // Undefined
+
+        // ================== Return function =========================
+        // if we are returning the any value it will print the at the second console.log(x())
+        // function x(){
+        //     console.log("hello");
+        //     return "hi"
+        // }
+        // console.log(x());
+
+        // =============================== Paramiterized Function ============================
+        // function x(a, b){
+        //     console.log(a, b);
+        // }
+        // x(10, 20)
+
+        // ================================== Function Tracing ============================
+
+        // console.log(b());
+        // var b = function(){
+        //     console.log("hello");
+        // }
+        // a();
+
+        // ====================================== Tracing function ======================
+        // let a = 10
+        // function x(){
+        //     let b = 20
+        //     function y(){
+        //         console.log(b);
+        //     }
+        //     return y
+        // }
+        // let c = x()
+        // console.log(c);
+
+        // ========================= IIFE =========================
+        // (function(){
+        //     console.log("hi");
+        // })();
+        // // semicolun is mandetory to write the back to back IIFE
+
+        // let y = (function(){
+        //     return "hye"
+        // })()
+        // console.log(y);
+
+        // ++++++++++++++++++++ Arrow Function +++++++++++++++++
+
+        // ============ In arrow function there are 3 types of advantages ===========
+        // 1. if we have single line statement, curly backets is not mandetory 
+        // 2. if we have single line, but it will returning any type data it is not mandatory to use return keyword if we are using the return keyword curly backets also mandatory to use
+        // 3. if we have a single parameter it is not mandatory to use ()(parentaties)
+
+        // let x = ()=>console.log("hello"); //(1)
+        // x()
+
+        // let y = ()=> {return "bye"}//(2)
+        // let y = ()=>"bye"
+        // console.log(y());
+
+        // let z = a => a //(3)
+        // console.log(z(10));
+
+        // ======================= Higher Order Function ===========================
+        // function add(a, b, task){
+        //     console.log(a, b, task);
+        //     let c = task(a, b)
+        //     console.log(c);
+        // }
+        // add(2, 3, function(x, y){return x+y})
+
+        // ========= Own Created ============ Nested Higher Order Function =======================
+        // function add(a, b, task){
+        //     let c = task(a, b)
+        //     console.log(c);
+        // }
+        // function y(x, y){
+        //     task1()
+        //     return x+y
+        // }
+        // function task1(){
+        //     console.log("Jeelani");
+        // }
+        // add(10, 20, y)
+
+        // ================ Constructor Function ===================
+        // function Person(name, company, salary){
+        //     this.EmpName = name
+        //     this.EmpCompany = company
+        //     this.EmpSalary = salary
+        //     this.EmpAddress = function(z){
+        //         return ("hello "+ z)
+        //     }
+        // }
+        // let employee1 = new Person("Rohit", "Tcs", 30000)
+        // let employee2 = new Person("Rahul", "Google", 40000)
+        // console.log(employee1.EmpAddress("Jeelani"));
+        // console.log(employee2);
+
+
+
+
+    </script>
+</body>
+</html>

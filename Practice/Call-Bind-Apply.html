@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let name = {
+            name: "jeelani",
+            age: 23,
+            courses: function (designation, state) {
+                console.log(this.name + " " + this.age + " " + designation + " " + state);
+            }
+        }
+        let name2 = {
+            name: "Afroz",
+            age: 22,
+        }
+        // //first argument is the always name and second argument is passing argument to the function
+        // name.courses.call(name2, "HTML", "CSS")
+
+        ////it is similarly to the call method but the difference is we are passing the values into an array
+        // name.courses.apply(name, ["HTML", "CSS"])
+
+        // let course = name.courses.bind(name2, "HTML", "CSS")
+        // course()
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>Debouncing</h1>
+    <input type="text">
+    <script>
+        let data = document.querySelector('input')
+        let getData = (e) => { console.log(e.target.value); }
+
+        let debounce = (fun, delay) => {
+            let timerId;
+            return (e) => {
+                clearTimeout(timerId)
+                timerId = setTimeout(() => fun(e), delay)
+            }
+        }
+
+        let debouncingCallAPI = debounce(getData, 1000)
+        data.addEventListener('input', debouncingCallAPI)
+
+
+
+        // let data = document.querySelector('input')
+
+        // let debounce = (fun, delay) => {
+        //     let timerId;
+        //     return (e) => {
+        //         clearTimeout(timerId)
+        //         timerId = setTimeout(() => fun(e), delay)
+        //     }
+        // }
+
+        // let getData = (e) => {
+        //     console.log(e.target.value);
+        //     fetch('https://jsonplaceholder.typicode.com/todos/1')
+        //         .then(response => response.json())
+        //         .then(json => console.log(json))
+        // }
+
+        // let debouncingCallAPI = debounce(getData, 1000)
+        // data.addEventListener('input', debouncingCallAPI)
+    </script>
+</body>
+
+</html>

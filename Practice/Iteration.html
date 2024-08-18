@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let fruits = ['mango', 'banana', 'grapes', "pineapple"]
+        // let [fruit1, fruit2, fruit3, fruit4] = fruits
+        // console.log(fruit4);
+        
+        // let [fruits1, ...fruits2] = fruits
+        // console.log(fruits1, fruits2);
+        
+        // for(let index in arr){
+        //     console.log(index);
+        // }
+        // for(let values of arr){
+        //     console.log(values);
+        // }
+        // arr.forEach((a, b, c)=>{
+        //     // a print the Values -- b print the Index Values -- c print the index and keys it is applicable in forEach() only
+        //     console.log(a, b, c);
+        // })
+
+        // let z = arr.forEach(element => {
+        //    return element 
+        // });
+        // console.log(z);
+
+
+        // ========================= Filter ========================
+        // let arr = [10, 20, 30, 40, 50]
+        // let x = arr.filter((ele)=>{
+        //     console.log(ele);
+        //     return ele
+        // })
+        // console.log(x);
+
+        let books = [{name:"HTML", price:500},
+                     {name:"CSS", price:1000},
+                     {name:"Js", price:1400},
+                     {name:"React", price:750}]
+
+        let a = books.filter((ele)=>{
+            return ele.price<1000
+        })
+        console.log(a);
+
+        let c = a.reduce((acc, cv)=>{
+            return acc+cv.price
+        },0)
+        
+        console.log(c);
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            display: none;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="cla">  Dropdown  </div>
+    <button  ondblclick="b()" >Click</button>
+    <script>
+
+        let div = document.querySelector("#cla")
+
+        addEventListener('click', ()=>{
+            div.style.display = "block";
+        })
+
+        // function a(){
+        //     div.style.display="block"
+        // }
+
+        function b(){
+            div.style.display="none"
+        }
+    </script>
+</body>
+</html>

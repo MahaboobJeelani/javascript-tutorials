@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // ========================= types of Errors ======================
+        // 1. EvalError
+        // 2. RangeError
+        // 3. ReferanceError
+        // 4. SyntaxError
+        // 5. TypeError
+        // 6. URIError
+        // 7. AggregateError
+
+        // try{
+        //     blabla
+        // }catch(error){
+        //     console.log("This is the Error");
+        // }
+
+        // ============
+        // setTimeout(()=>{
+        //     try{
+        //         blabla
+        //     }catch(error){
+        // console.log("this is the error");
+        // console.log(error.name);
+        // console.log(error.message);
+        // console.log(error.stack);
+        //     }
+        // },1000)
+
+        // =====================
+        // try{
+        //     let json = '{"name" : "jeelani", "age" : "23"}'
+        //     //// The below functions is convert JSON string to the Javascript object
+        //     // let userData = JSON.parse(json)
+
+        //     //// The below functions is used to convert the javascript string object to JSON 
+        //     // let userData = JSON.stringify(json)
+
+
+        //     console.table(userData.name);
+
+        // }catch(error){
+        //     console.log(error, "JSON file is not found");
+        // }
+
+        // ===========================
+        // try { 
+        //     let json = '{"name" : "jeelani", "age" : "23"}'
+        //     let userData = JSON.parse(json)
+        //     if (!userData.name) {
+        //         throw new Error("Incomplete Data : Name not found")
+        //     }
+        //     console.table(userData.name);
+
+        // } catch (error) {
+        //     console.log(error, "Data is not found");
+        // }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="play()">play</button>
+    <button onclick="pause()">Stop</button>
+
+    <!-- <button onclick="b()" ondblclick="a()">Click</button>
+
+    <button ondblclick="a()">Click</button>
+
+    <button oncontextmenu="b()">Right Click</button>
+
+    <h1 onmouseover="c()" onmouseout="d()">Welcome to JavaScript</h1>
+
+    <button onmousedown="e()" onmouseup="f()" >Click on mouse Down</button> -->
+
+    <script>
+        // setInterval(function(){
+        //     setTimeout(()=>{
+        //         console.log("world");
+        //     })
+        // },1000)
+
+
+
+        //     setTimeout(()=>{
+        //     console.log("hi");
+        // },500)
+
+        let a;
+        let b;
+        let c;
+
+     function play(){
+        a =setInterval(()=>{
+            document.body.style.background="red"
+        },500)
+        b =setInterval(()=>{
+            document.body.style.background="green"
+        },600)
+
+        c =setInterval(()=>{
+            document.body.style.background="blue"
+        },700) 
+        }
+
+        function pause(){
+            clearInterval(a)
+            clearInterval(b)
+            clearInterval(c)
+        }
+
+    // function play(){
+    //     a = setInterval(()=>{
+    //         document.body.style.background="cyan"
+    //     },500)
+    //     b = setInterval(()=>{
+    //         document.body.style.background="orange"
+    //     },650)
+    //     c = setInterval(()=>{
+    //         document.body.style.background="red"
+    //     },700)
+    //     console.log(window);
+    // }
+
+    // function pause(){
+    //     clearInterval(this.a)
+    //     clearInterval(this.b)
+    //     clearInterval(this.c)
+    // }
+
+
+    // function a(){
+    //     console.log("double Click");
+    //     document.body.style.background="black"
+    // }
+
+    // function b(){
+    //     console.log("Right Click");
+    //     document.body.style.background="red"
+    // }
+
+    // function c(){
+    //     console.log("Mouse Over");
+    //     document.querySelector("h1").style.background="yellow"
+    // }
+    
+    // function d(){
+    //     console.log("Mouse Out");
+    //     document.querySelector("h1").style.background="cyan"
+    // }
+
+    // function e(){
+    //     console.log("On Mouse Down");
+    //     document.body.style.background="blue"
+    // }
+
+    // function f(){
+    //     console.log("On Mouse up");
+    //     document.body.style.background="red"
+    // }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ////it effeted the original arr
+        let arr = ["a", "b", "c", "d"]
+        arr.splice(1, 2, "y")
+        console.log(arr);
+
+        //it does not effeted the original arr
+        // let a = ["a", "b","c","d"]
+        // a.slice(0, 3)
+        // console.log(a);
+
+        //slice get effected the when it will store the another value otherwise it don't effected
+        // let arr = ["a", "b", "c", "d"]
+        // let a = arr.slice(2)
+        // console.log(a);
+    </script>
+</body>
+</html>

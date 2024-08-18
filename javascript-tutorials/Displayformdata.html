@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form >
+        <label>Name</label>
+        <input type="text" id="name1">
+        <label>Salary</label>
+        <input type="text" id="salary1">
+        <label>Company</label>
+        <input type="text" id="companyname1">
+        <button onclick="datahandle()">Submit</button>
+    </form>
+
+    <script>
+        let name = document.getElementById("name1")
+        let salary = document.getElementById("salary1")
+        let companyname = document.getElementById("companyname1")
+
+        let datahandle = ()=>{
+            event.preventDefault()
+            let data1 = name.value
+            let data2 = salary.value
+            let data3 = companyname.value
+            console.log(data1, data2, data3);
+        }
+    </script>
+
+</body>
+
+</html>

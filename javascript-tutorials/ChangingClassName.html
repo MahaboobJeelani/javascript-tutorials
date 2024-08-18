@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .red{
+            color: white;
+            background: red;
+        }
+        .text-black{
+            background: maroon;
+            color: white;
+        }
+        .changecolor{
+            background: yellow;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Changing the className by using the javascript with the help of the id Name -->
+
+    <div id="first" class="red">
+        <span>
+            Welcome to my World
+        </span>
+    </div>
+
+    <script>
+
+        let Change = document.getElementById("first")
+        // Change.className = "changecolor red"
+        // console.log(Change.className);
+
+        ////======================== removing the className by using the ClassList ========================
+        // Change.classList.add("red")
+        // console.log(Change.className);
+
+        ////======================== Adding the className by using the ClassList.add ========================
+        // Change.classList.add("yellow")
+        // console.log(Change.className);
+
+        ////======================= if className is already present toggle method remove the class or className is not prasent it will added the className ========================
+        // Change.classList.toggle("red")
+        // console.log(Change.className);
+        // console.log(Change);
+    </script>
+</body>
+</html>

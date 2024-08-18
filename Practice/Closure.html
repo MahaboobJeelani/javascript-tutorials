@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log("hello");
+        // function x() {
+        //     let a = 10
+        //     function y() {
+        //         return a
+        //     }
+        //     return y
+        // }
+        // let c = x()
+        // console.log(c());
+
+        // const proto = { greet: function () { console.log('Hello!'); } };
+        // const obj = Object.create(Object.prototype);
+        // console.log(obj.name = "jeelani");
+
+        setImmediate(() => {
+            console.log('Immediate callback');
+        });
+        console.log('Current operation');
+
+
+        process.nextTick(() => {
+            console.log('Next tick callback');
+        });
+        console.log('Current operation');
+
+
+
+    </script>
+</body>
+
+</html>

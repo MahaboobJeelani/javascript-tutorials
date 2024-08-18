@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = [10, 20, 30, 40]
+        // console.log(arr);
+        // arr.pop()
+        // console.log(arr);
+
+        // arr.push(30, "hello", true)
+        // console.log(arr);
+
+        // arr.shift()
+        // console.log(arr);
+
+        // arr.unshift(true, "hello", "hi")
+        // console.log(arr);
+
+        // let arr1 = [10, 20, 30, 40]
+        // let arr2 = [50, 60, 70, 80]
+        // let arr3 = [true, 10, "hello"]
+        // let indexvalue = arr1.indexOf(10)
+        // console.log(indexvalue);
+
+        // let includes = arr1.includes(20)
+        // console.log(includes);
+
+        // let mergearr = arr1.concat(arr2, arr3)
+        // console.log(mergearr);
+
+        //========== nested array ==============
+        // let arr1 = [10, true, undefined, [10, 20, 30]]
+        // console.log(arr1[1])
+        // console.log(arr1[3]);
+        // console.log(arr1[3][1]);
+
+        ////===========================  REDUCE METHOD  ==========================================
+        // let books = [{ name: "maths", author: "Ramanujan", price: 200 },
+        // { name: "History", author: "Giri", price: 300 },
+        // { name: "Html", author: "Tim-berner", price: 400 },
+        // { name: "CSS", author: "lie", price: 500 },
+        // { name: "JS", author: "Brendon", price: 450 }]
+
+        // let highestPriceBook = books.reduce((prev, current) => {
+        //     console.log(prev);
+        //     return (prev.price > current.price) ? prev : current;
+        // });
+
+        // console.log(highestPriceBook);
+
+        // // let sum1 = books.reduce((acc, cv) => {
+        // //     return acc + cv.price
+        // // }, 0)
+        // // console.log(sum1);
+
+        // let sum = books.filter((cv) => {
+        //     return cv.price < 1000
+        // })
+
+        // let reducePrice = sum.reduce((acc, cv) => {
+        //     return acc + cv.price
+        // }, 0)
+        // console.log(reducePrice);
+
+
+        ////================================= Important in mock =================================================
+        // // adding the 10% GST in the price
+        let books = [{name:"maths", author:"Ramanujan", price:200},
+                     {name:"History", author:"Giri", price:300},
+                     {name:"Html", author:"Tim-berner", price:400},
+                     {name:"CSS", author:"lie", price:500},
+                     {name:"JS", author:"Brendon", price:450}]
+
+            let value = books.filter((x)=>{
+                return x.price<400
+            })
+            console.log(value);
+            
+            let value2 = value.map((y)=>{
+                y.price = y.price + y.price/10
+                return y
+            })
+            console.log(value2);
+
+
+            let finalPrice = value2.reduce((acc,cv)=>{
+                return acc+cv.price
+            },0)
+
+            console.log(finalPrice);
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button onclick="name(10)">Submit</button> -->
+    <script>
+        // MDN docs you see the related topics on this website 
+        class RailwayForm {
+            constructor(givenname, trainno, address) {
+                console.log(givenname + " " + trainno + " " + address);
+                this.givenname = givenname
+                this.trainno = trainno
+                this.address = address
+            }
+            submit() {
+                alert(`${this.givenname} your form for your train no ${this.trainno} `)
+                this.trainno = 0
+            }
+            cancel() {
+                alert(`${this.givenname} this form is cancelled for the train number ${this.trainno}`)
+            }
+        }
+        let jeelaniform = new RailwayForm("jeelani", 298735, "25-891 bangalore 10/22/2023")
+        jeelaniform.submit()
+        jeelaniform.cancel()
+    </script>
+</body>
+
+</html>

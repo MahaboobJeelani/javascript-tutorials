@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">Name:</label>
+        <input type="text" required>
+        <label for="">Email :</label>
+        <input type="email" required>
+        <label for="">Password :</label>
+        <input type="password" required>
+        <label for="">Gender :</label>
+        Male: <input type="radio" name="a" value="Male">
+        Female : <input type="radio" name="a" value="Female">
+        <label for="">Courses :</label>
+        HTML<input type="checkbox" value="HTML">
+        CSS<input type="checkbox" value="CSS">
+        JS<input type="checkbox" value="JS">
+        <button onclick="submit1()">Submit</button>
+    </form>
+
+    <script>
+        let inputs = document.querySelectorAll('input')
+        function submit1() {
+            event.preventDefault()
+            let name = inputs[0].value
+            let email = inputs[1].value
+            let password = inputs[2].value
+            let gender;
+            let courses;
+
+            if (name === "") {
+                alert("Name field is required")
+            }
+            else if (name.length <= 3) {
+                alert('Your Name is Less than 3 Charectors')
+            }
+
+            if (password.length < 4) {
+                alert("Your Password is less than 4 letters")
+            }
+
+            if (inputs[3].checked == false && inputs[4].checked == false) {
+                alert("select Gender")
+            }
+            if (inputs[3].checked === true) {
+                gender = inputs[3].value
+            }
+
+            if (inputs[4].checked === true) {
+                gender = inputs[4].value
+            }
+
+            if (inputs[5].checked == false && inputs[6].checked == false && inputs[7].checked == false) {
+                alert("Select COURSE");
+            }
+            for (let i = 5; i < inputs[i]; i++) {
+                if (inputs[i].checked == true) {
+                    inputs[i].addEventListener('click', () => {
+                        console.log(inputs[i].value);
+                    })
+                }
+            }
+
+            console.log(name, email, password, gender);
+        }
+    </script>
+</body>
+
+</html>

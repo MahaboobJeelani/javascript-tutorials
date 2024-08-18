@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="2px" cellpadding="5px" cellspacing="0" id="a">
+        <tr>
+            <td>S.no</td>
+            <td>Sub-1</td>
+            <td>sub-2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Telugu</td>
+            <td>English</td>
+        </tr>
+        
+    </table>
+    <button onclick="createtable()">Submit</button>
+    <script>
+        function createtable(){
+            let b = document.getElementById("a")
+            let tr1 = document.createElement("tr")
+            let td1 = document.createElement("td")
+            let td2 = document.createElement("td")
+            let td3 = document.createElement("td")
+
+            td1.innerText = prompt("Enter the Sl.no")
+            td2.innerText = prompt("Enter the Sub-1")
+            td3.innerText = prompt("Enter the Sub-2")
+
+            tr1.appendChild(td1)
+            tr1.appendChild(td2)
+            tr1.appendChild(td3)
+
+            b.appendChild(tr1)
+        }
+
+
+    </script>
+</body>
+
+</html>

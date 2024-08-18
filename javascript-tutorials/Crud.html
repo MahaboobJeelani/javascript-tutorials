@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="">Name</label>
+        <input type="text"> <br>
+        <label for="">Company</label>
+        <input type="text"> <br>
+        <label for="">Salary</label>
+        <input type="text"> <br>
+        <button onclick="submitdata()">Submit</button>
+        <button onclick="deleteitems()" id="deleteitems">Delet</button>
+    </form>
+    <div id="formdata">
+
+    </div>
+    <script>
+        // //======================== Code With harry ==================================
+        // let data = document.querySelectorAll("input")
+        // let displayui = document.querySelector("#formdata")
+        // let deleteitemss = document.getElementById("deleteitems")
+
+        // function submitdata(){
+
+        //     event.preventDefault()
+        //     let name = data[0].value
+        //     let company = data[1].value
+        //     let salary = data[2].value
+
+        //     localStorage.setItem("Todo", JSON.stringify([name, company]))
+        //     console.log(name, company, salary);
+
+        //     displayui.innerHTML = `<h1>${name}</h1>
+        //                            <p>${company}</p>
+        //                            <p>${salary}</p>`
+        // }
+
+        // // ================== not Working try it ================
+        // function deleteitems(){
+        //     event.preventDefault()
+        //     localStorage.removeItem("Todo")
+        // }
+        
+        // function processTask(data, callback) {
+        //     // Perform some task with the provided data
+        //     // Once the task is complete, call the callback function
+        //     callback(data);
+        // }
+
+        // function handleCompletion(result) {
+        //     console.log("Task completed with result: " + result);
+        // }
+
+        // // Calling the function with a callback
+        // processTask("Some data", handleCompletion);
+
+
+    </script>
+</body>
+
+</html>

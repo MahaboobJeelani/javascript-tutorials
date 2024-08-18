@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Script>
+        // let person = {
+        //     name: "abcd",
+        //     age: 25,
+        //     gender: "male"
+        // }
+        // console.log(person.name);
+
+        // let person1 = {
+        //     name: "abcd",
+        //     age: 35,
+        //     gender: "male"
+        // }
+        // person1.age = 30
+        // console.log(person1);
+        // person1.name = "xyz"
+        // console.log(person1);
+        // delete person1.age
+        // console.log(person1);
+
+        // person1.age = 30
+        // console.log(person1);
+
+        // ////============== we can modify the key values in the objects =======================
+        // person1.age = 40
+        // console.log(person1);
+
+
+        // let person = {
+        //     name : "abcd",
+        //     id : 123,
+        //     Skills : ["html", "CSS", "JS"],
+        //     address : {
+        //         city : "Bangalore",
+        //         pincode : 563789
+        //     }
+        // }
+        // console.log(person);
+        // console.log(person.name);
+        // console.log(person.Skills);
+        // console.log(person.Skills[1]);
+        // console.log(person.address);
+        // console.log(person.address.pincode);
+
+        ////by targeting the inside object array you can use slice()
+        // let newValue = person.Skills.slice(0,2)
+        // console.log(newValue);
+
+
+        // let person = {
+        //     name : "Abhi",
+        //     id : 123,
+        //     skills : [{name : "HTML"}, {name : "CSS"}, {name : "JS"}],
+        //     address : {
+        //         city : "bangalore",
+        //         pincode : 573201
+        //     }
+        // }
+
+        // console.log(`My Name is ` + person.name+ ` and these are technologies i know `+ person.skills[0].name+ ` `+person.skills[1].name +` `+person.skills[2].name+ ` I live in `+ person.address.city+``+` and are pincode `+ person.address.pincode);
+
+        // console.log(`My Nmae is ${person.nmae} these are the technologies i know
+        // 1: ${person.skills[0].name}
+        // 2: ${person.skills[1].nmae}
+        // 3: ${person.skills[2].name}
+        // i live in ${person.address.city} and the pincode is ${person.address.pincode}`);
+
+        // console.log(`I live in `);
+        // console.log(person)
+        // console.log(person.skills[2]);
+        // console.log(person.skills[2].name);
+        // person.skills.splice(0, 0, "Bye")
+        // console.log(person.skills);
+        // person.company = "infy"
+        // console.log(person);
+
+        ////====================== Higher Order Function =====================/////
+        // function operation(fun, x, y){
+        //     return fun(x, y)
+        // }
+        // function add(a, b){
+        //     return a+b
+        // }
+
+        // let results = operation(add, 5, 3)
+        // console.log(results);
+
+        /////====================== Generator Function ===========================
+        // function* countUpTo(limit) {
+        //     let count = 1;
+        //     while (count <= limit) {
+        //         yield count;
+        //         count++;
+        //     }
+        // }
+
+        // const counter = countUpTo(5);
+        // for (let number of counter) {
+        //     console.log(number);
+        // }
+
+
+        //// ================================ normal function =================================
+        // function greet(){
+        //     console.log("Hello World");
+        // }
+        // greet()
+
+        ////============================ Arrow Function =================================
+        ////Passing a function as an arguments to the another function is know as the call back function
+        // let Callback = ()=>{
+        //     console.log("Hello World");
+        // }
+        // Callback()
+
+        ////+++++++++++++++++++++++++++++ Another Example for the call back function ++++++++++++++++++++++++++++++
+        // function operation(a, b, task){
+        //     let res = task (a, b)
+        //     return res
+        // }
+        // let res1 = operation(10, 20, function (a, b){
+        //     return a+b
+        // })
+        // console.log(res1);
+
+
+        ////=========================== Anonymous Function ============================
+        // let Anonymous = function(){
+        //     console.log("Hello World");
+        // }
+        // Anonymous()
+
+        ////========================== Higher order Function ===========================
+        // function operation(fun, x, y){
+        //     return fun(x, y)
+        // }
+        // function add(a, b){
+        //     return a+b
+        // }
+        // let a = operation(add, 5, 2)
+        // console.log(a);
+
+        ////=================== Immidiate Invoked Function Expression ========================
+        // (function greet(){
+        //     console.log("Hello World");
+        // })();
+
+        ////=================== Generated Function =======================
+        // function* count(limit){
+        //     let num = 1
+        //     while(num<=limit){
+        //         yield num;
+        //         num++
+        //     }
+        // }
+        // let a = count(6)
+        // for(let number of a){
+        //     console.log(number);
+        // }
+
+        ////====================== Method Function ==========================
+        // let calculator = {
+        //     add : function(a, b){
+        //         return a+b
+        //     }
+        // }
+        // let sum = calculator.add(2, 4)
+        // console.log(sum);
+
+        ////========================== Closure  ========================
+        ////lexical environment (also known as a scope or environment record) is a fundamental concept that helps manage the variables and their values in a program. Lexical environments play a crucial role in determining variable visibility, scope, and lifetime within JavaScript code.
+        // function greet(){
+        //    let name = "jeelani"
+        //     function ageadd(){
+        //         return name
+        //     }
+        //     return ageadd;
+        // }
+        // let add = greet();
+        // console.log(add());
+
+
+        ////==================== Rest Function =======================================
+        // function test1(a, ...b){
+        //     console.log(a);
+        //     console.log(b);
+        // }
+        // test1(10, 20, 30)
+
+        ////==================== Spread Function =======================================
+        // let a = [10, 20, 30, 40, 50]
+        // console.log(Math.max(...a));
+
+
+    </Script>
+</body>
+
+</html>

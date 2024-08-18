@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ========================= CODE WITH HARRY ==================================
+        // class animal{
+        //     constructor(name, color){
+        //         this.name = name
+        //         this.color = color
+        //     }
+        //     run(){
+        //         console.log(`${this.name} is running`);
+        //     }
+        //     shouting(){
+        //         console.log(`${this.name} is shouting`);
+        //     }
+        // }
+
+        // class monkey extends animal{
+        //     fight(){
+        //         console.log(`${this.name} is fighting`);
+        //     }
+        // }
+
+        // let ani = new animal("Chimpu", "gray")
+        // let mon = new monkey("bravo", "black")
+        // ani.run()
+        // ani.shouting()
+        // mon.shouting()
+        // mon.fight() 
+        // // we cannot extends the child class method into parent class
+        // ani.fight() // this will thows an error
+
+        // //============================== Medthod Overrind =======================================
+        // class employee {
+        //     login() {
+        //         console.log(`employee  is login`);
+        //     }
+        //     logout() {
+        //         console.log(`employee  is logout`);
+        //     }
+        //     requestedleave(leaves) {
+        //         console.log(`employee is ${leaves + 1} leave granted`);
+        //     }
+        // }
+        // class programmer extends employee {
+        //     requestedleave() {
+        //         super.requestedleave(4)
+        //         console.log(`one Extra`);
+        //     }
+
+        // }
+        // let emp = new programmer()
+        // emp.requestedleave()
+
+        // //=============================== Static Methods ========================================
+
+        // class Animal{
+        //     constructor(name){
+        //         this.name = Animal.capitilize(name)
+        //     }
+        //     walk(){
+        //          alert(`${this.name} animal is walking`);
+        //     }
+        //     static capitilize(name){
+        //         return name.charAt(0).toUpperCase() + name.substr(1, name.length)
+        //     }
+        // }
+        // let j = new Animal("chimpi")
+        // j.walk()
+
+
+        // //================================ #82 Getters and Setters ====================
+
+        // class Animal{
+        //     constructor(name){
+        //         this._name = name
+        //     }
+        //     walk(){
+        //         alert(`${this.name} animal is walking`)
+        //     }
+        //     get name(){
+        //         return this._name
+        //     }
+        //     set name(newName){
+        //         this._name = newName
+        //     }
+        // }
+
+        // class Rabbit extends Animal{
+        //     eating(){
+        //         console.log("Carrot Eating");
+        //     }
+        // }
+
+        // let monkey = new Animal("Chimpi")
+        // monkey.walk()
+        // console.log(monkey.name);
+        // monkey.name = "chimpanji"
+        // console.log(monkey.name);
+        // // console.log(monkey instanceof Animal);
+
+        // // //// instanceof means example c is present in object if it is present it will return true not present in Object it will return false
+        // let c = "eat"
+        // console.log(c instanceof Animal);
+
+        // //// if any class is extends from the parent class example rabbit extends the Animal class it will return true
+        // console.log(monkey instanceof Animal);
+    </script>
+</body>
+
+</html>

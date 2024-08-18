@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--callback hell in javascript where you have multiple nested callback functions in asynchronous JavaScript code, making the code difficult to read, understand, and maintain. It typically occurs when dealing with asynchronous operations that depend on the results of other asynchronous operations or when handling multiple asynchronous tasks sequentially. (BroCode channel) -->
+    <script>
+
+        function task1(callback) {
+            setTimeout(() => {
+                console.log("This is task1 completed");
+                callback()
+            }, 2000)
+
+        }
+        
+        function task2(callback) {
+            setTimeout(() => {
+                console.log("This is task2 completed");
+                callback()
+            }, 1000)
+        }
+
+        function task3(callback) {
+            setTimeout(() => {
+                console.log("This is task3 completed");
+                callback()
+            }, 3000)
+        }
+
+        function task4(callback) {
+            setTimeout(() => {
+                console.log("This is task4 completed");
+                callback()
+            }, 1500)
+        }
+
+        task1(() => {
+            task2(() => {
+                task3(() => {
+                    task4(() => {
+                        console.log("All task Completed");
+                    })
+                })
+            })
+        })
+    </script>
+</body>
+</html>

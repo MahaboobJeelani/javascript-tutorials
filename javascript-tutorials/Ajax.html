@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo">Here the content is uploaded</p>
+    <button onclick="loaddata()">click</button>
+
+    <script>
+
+        function loaddata() {
+
+            ////xhttp is variable name and XMLHttpRequest() it is a inbuild method to create an object, object is createdwith new keyword 
+
+            var xhttp = new XMLHttpRequest()
+
+            //// onreadystatechange it is working as like event it will check the readystate like (0: Request no initialize, 1: server Connection Established, 2:Request received, 3: Processing Request, 4: Request Finished & response  is ready --- it checks all the conditions)
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    document.getElementById("demo").innerHTML = this.responseText
+                    console.log(this.response);
+                }
+            }
+            //// For access the data from the perticular website we use OPEN method it will accept the 3 parameter (1. GET(GET is used to get the data from the perticular document, it is the open source)/POST(POST are used to post the data in the server and it is the hidden source) 2.path in string 3.ASENSE MODE it contains TRUE(if it is TRUE asynchronise mode is on, is it is standard to use)/FALSE(if it is TRUE asynchronise mode is Off) )
+
+            xhttp.open('GET', "https://dummyjson.com/products", true)
+
+            ////SEND method is used to send the request to the http server
+
+            xhttp.send()
+        }
+
+
+
+    </script>
+</body>
+
+</html>

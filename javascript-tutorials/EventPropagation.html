@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section>article {
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section>article>div {
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Event Propagation
+        1.  Event Bubbling === by defualt is event bubbling (false)
+        2.  Event Capturing === if applying (true) after curly braces
+    -->
+    <!-- <section>
+        <article>
+            <div>
+
+            </div>
+        </article>
+    </section> -->
+
+    <button id="btn" onclick="a()">Click Me</button>
+
+    <select onchange="c()">
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+    </select>
+    <script>
+
+        let section = document.querySelector("section")
+        let article = document.querySelector("article")
+        let div = document.querySelector("div")
+
+        ////============================ Event Capturing =====================================
+        // section.addEventListener("click", ()=>{
+        //     section.style.background = "red"
+        //     console.log("Section");
+        // },true)
+
+        // article.addEventListener("click", ()=>{
+        //     article.style.background = "green"
+        //     console.log("article");
+        // },true)
+
+        // div.addEventListener("click", ()=>{
+        //     div.style.background = "blue"
+        //     console.log("div");
+        // },true)
+
+        ////============================ Event Bubbling =====================================
+
+        // section.addEventListener("click", ()=>{
+        //     section.style.background = "red"
+        //     console.log("Section");
+        // })
+
+        // article.addEventListener("click", ()=>{
+        //     article.style.background = "green"
+        //     console.log("article");
+        //     // event.stopImmediatePropagation()
+        // })
+
+        // div.addEventListener("click", ()=>{
+        //     div.style.background = "blue"
+        //     console.log("div");
+        // })
+
+        //==========================================================================================================  
+        // let ab = document.getElementById("btn")
+        // let a = function (x) {
+        //     alert("Hello World 1")
+        // }
+
+        // let b = function (x) {
+        //     alert("Welcome to my world")
+        // }
+
+        // ab.addEventListener("click", a)
+
+        // let abc = prompt("choose the number from 1 to 2")
+        // if (abc == "2") {
+        //     ab.addEventListener("click", b)
+        // }
+
+
+        // =================== we check the clicked position of the user by using addEventListener ==================
+        // let ab = document.getElementById("btn")
+
+        // let a = function (ele) {
+        //     console.log(ele);
+        //     console.log("User Click int his position" + " " + ele.clientX, ele.clientY);
+        //     console.log(ele.type);
+        // }
+        // ab.addEventListener("click", a)
+
+        // function c() {
+        //     let colors = document.querySelector("select")
+        //     document.body.style.background = colors.value
+        // }
+
+    </script>
+</body>
+
+</html>
